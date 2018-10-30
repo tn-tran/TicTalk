@@ -19,6 +19,8 @@ struct Business: Codable  {
 	let url: String?
 	let review_count: Int?
 	let location: Location
+	    let coordinates: Center
+	let rating: Double
 	
 	private enum CodingKeys: String, CodingKey {
 		case name
@@ -26,6 +28,8 @@ struct Business: Codable  {
 		case url
 		case review_count = "review_count"
 		case location
+		case rating
+		case coordinates
 	}
 }
 
@@ -52,3 +56,7 @@ enum State: String, Codable {
 enum Country: String, Codable {
 	case us = "US"
 }
+struct Center: Codable {
+	let latitude, longitude: Double
+}
+

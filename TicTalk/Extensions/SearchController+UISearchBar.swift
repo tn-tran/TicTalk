@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 extension SearchController: UISearchBarDelegate {
-
+	
 	func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
 		isSearching = true
+		
 	}
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		isSearching = true
+//		print(searchText)
 //		fetchBusiness(searchText: searchText)
 	}
 	func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -28,4 +30,5 @@ extension SearchController: UISearchBarDelegate {
 		guard let searchText = searchBar.text else  {  return }
 //		fetchBusiness(searchText: searchText)
 	}
+	
 }

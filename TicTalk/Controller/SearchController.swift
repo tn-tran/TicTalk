@@ -19,17 +19,38 @@ class SearchController: UICollectionViewController, UICollectionViewDelegateFlow
 	var currentLocation = CLLocationCoordinate2D()
 	var location = CLLocation()
 	
-	
-	var searchBar: UISearchBar = {
-		let sb = UISearchBar()
-		sb.placeholder = "Search"
-		sb.frame = CGRect(x: 0, y: 0, width: Int(UIScreen.main.bounds.width), height: 40)
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setupCurrentLocation()
+		setupNavigationBarAndSearchBar()
+		let pizza = "pizza"
+		let fetchBussiness = APIService()
+		//		fetchBussiness.fetchBusiness(searchText: pizza, currentLocation: currentLocation)
+		fetchBussiness.fetchBusiness(searchText: pizza, currentLocation: currentLocation) { (business) in
+			if !self.business.isEmpty {
+				self.business.removeAll()
+			}
+			for businesses in business.businesses {
+				self.business.append(businesses)
+				//					self.business = business
+				//					print(business.location.displayAddress)
+			}
+//			print(business)
+			//				print(self.business.count)
+			DispatchQueue.main.async {
+				self.collectionView.reloadData()
+			}
+		}
+		collectionView?.backgroundColor = .white
+		collectionView?.register(SearchCell.self, forCellWithReuseIdentifier: cellId)
 		
-		sb.searchBarStyle = .minimal
-		return sb
-	}()
+	}
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+	}
+
 	
-	
+	//MARK: - Current Location methods/locationManager
 	fileprivate func setupCurrentLocation() {
 		// Ask for Authorisation from the User.
 		self.locationManager.requestAlwaysAuthorization()
@@ -48,36 +69,13 @@ class SearchController: UICollectionViewController, UICollectionViewDelegateFlow
 		//		collectionView.register(SearchHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
 		navigationItem.title = "TicTalk"
 		navigationController?.navigationBar.prefersLargeTitles = true
-		view.addSubview(searchBar)
-		searchBar.delegate = self
-		searchBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 40)
-	}
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		setupCurrentLocation()
-		setupNavigationBarAndSearchBar()
-		let pizza = "pizza"
-		let fetchBussiness = APIService()
-		//		fetchBussiness.fetchBusiness(searchText: pizza, currentLocation: currentLocation)
-		fetchBussiness.fetchBusiness(searchText: pizza, currentLocation: currentLocation) { (business) in
-			if !self.business.isEmpty {
-				self.business.removeAll()
-			}
-			for businesses in business.businesses {
-				self.business.append(businesses)
-				//					self.business = business
-				//					print(business.location.displayAddress)
-			}
-			print(business)
-			//				print(self.business.count)
-			DispatchQueue.main.async {
-				self.collectionView.reloadData()
-			}
-		}
-		collectionView?.backgroundColor = .white
-		collectionView?.register(SearchCell.self, forCellWithReuseIdentifier: cellId)
+		let searchController = UISearchController(searchResultsController: nil)
+		navigationItem.searchController = searchController
+		searchController.searchBar.tintColor = .white
+		searchController.searchBar.delegate = self
+//		searchController.searchBar.setImage(#imageLiteral(resourceName: "icons8-search-50"), for: .clear, state: .normal)
 		
+	
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -97,8 +95,10 @@ class SearchController: UICollectionViewController, UICollectionViewDelegateFlow
 	//	}
 	//
 	
+	
+	//MARK: - CollectionView methods
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-		return CGSize(width: view.bounds.width, height: 40)
+		return CGSize(width: view.bounds.width, height: 0)
 	}
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchCell
@@ -107,7 +107,6 @@ class SearchController: UICollectionViewController, UICollectionViewDelegateFlow
 	}
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		
 		return business.count
 	}
 	
