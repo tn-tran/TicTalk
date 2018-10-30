@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFA183DE2184F0B500CE443B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA183DD2184F0B500CE443B /* AppDelegate.swift */; };
+		FFA183E02184F0B500CE443B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA183DF2184F0B500CE443B /* ViewController.swift */; };
+		FFA183E32184F0B500CE443B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA183E12184F0B500CE443B /* Main.storyboard */; };
+		FFA183E52184F0B600CE443B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA183E42184F0B600CE443B /* Assets.xcassets */; };
+		FFA183E82184F0B600CE443B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA183E62184F0B600CE443B /* LaunchScreen.storyboard */; };
+		FFA183F02184F4D300CE443B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA183EF2184F4D300CE443B /* MainTabBarController.swift */; };
+		FFA183F42184FA4A00CE443B /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA183F32184FA4A00CE443B /* SearchController.swift */; };
+		FFA183F62185035200CE443B /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA183F52185035200CE443B /* SearchHeader.swift */; };
+		FFA183FC2185077F00CE443B /* UIView+anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA183FB2185077F00CE443B /* UIView+anchor.swift */; };
+		FFA18404218547EB00CE443B /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA18403218547EB00CE443B /* SearchCell.swift */; };
+		FFA184062186A4E400CE443B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA184052186A4E400CE443B /* Result.swift */; };
+		FFA184082187B34A00CE443B /* UIImageView+loadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA184072187B34A00CE443B /* UIImageView+loadImage.swift */; };
+		FFA1840A2187BD2E00CE443B /* SearchController+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA184092187BD2D00CE443B /* SearchController+UISearchBar.swift */; };
+		FFA1840C21880B9000CE443B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1840B21880B9000CE443B /* APIService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FFA183DA2184F0B500CE443B /* TicTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA183DD2184F0B500CE443B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFA183DF2184F0B500CE443B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFA183E22184F0B500CE443B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFA183E42184F0B600CE443B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFA183E72184F0B600CE443B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFA183E92184F0B600CE443B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA183EF2184F4D300CE443B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FFA183F32184FA4A00CE443B /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		FFA183F52185035200CE443B /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
+		FFA183FB2185077F00CE443B /* UIView+anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+anchor.swift"; sourceTree = "<group>"; };
+		FFA18403218547EB00CE443B /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		FFA184052186A4E400CE443B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FFA184072187B34A00CE443B /* UIImageView+loadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+loadImage.swift"; sourceTree = "<group>"; };
+		FFA184092187BD2D00CE443B /* SearchController+UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchController+UISearchBar.swift"; sourceTree = "<group>"; };
+		FFA1840B21880B9000CE443B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFA183D72184F0B500CE443B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFA183D12184F0B500CE443B = {
+			isa = PBXGroup;
+			children = (
+				FFA183DC2184F0B500CE443B /* TicTalk */,
+				FFA183DB2184F0B500CE443B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFA183DB2184F0B500CE443B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFA183DA2184F0B500CE443B /* TicTalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFA183DC2184F0B500CE443B /* TicTalk */ = {
+			isa = PBXGroup;
+			children = (
+				FFA183FA2185076F00CE443B /* Extensions */,
+				FFA183DD2184F0B500CE443B /* AppDelegate.swift */,
+				FFA183F82185048900CE443B /* Controller */,
+				FFA183E92184F0B600CE443B /* Info.plist */,
+				FFA183E62184F0B600CE443B /* LaunchScreen.storyboard */,
+				FFA183E12184F0B500CE443B /* Main.storyboard */,
+				FFA183F72185047200CE443B /* Model */,
+				FFA183F92185048D00CE443B /* View */,
+			);
+			path = TicTalk;
+			sourceTree = "<group>";
+		};
+		FFA183F72185047200CE443B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFA184052186A4E400CE443B /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFA183F82185048900CE443B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFA183F32184FA4A00CE443B /* SearchController.swift */,
+				FFA183DF2184F0B500CE443B /* ViewController.swift */,
+				FFA183EF2184F4D300CE443B /* MainTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FFA183F92185048D00CE443B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFA183E42184F0B600CE443B /* Assets.xcassets */,
+				FFA183F52185035200CE443B /* SearchHeader.swift */,
+				FFA18403218547EB00CE443B /* SearchCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFA183FA2185076F00CE443B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFA183FB2185077F00CE443B /* UIView+anchor.swift */,
+				FFA184072187B34A00CE443B /* UIImageView+loadImage.swift */,
+				FFA184092187BD2D00CE443B /* SearchController+UISearchBar.swift */,
+				FFA1840B21880B9000CE443B /* APIService.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFA183D92184F0B500CE443B /* TicTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFA183EC2184F0B600CE443B /* Build configuration list for PBXNativeTarget "TicTalk" */;
+			buildPhases = (
+				FFA183D62184F0B500CE443B /* Sources */,
+				FFA183D72184F0B500CE443B /* Frameworks */,
+				FFA183D82184F0B500CE443B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicTalk;
+			productName = TicTalk;
+			productReference = FFA183DA2184F0B500CE443B /* TicTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFA183D22184F0B500CE443B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Tien-Enterprise";
+				TargetAttributes = {
+					FFA183D92184F0B500CE443B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = FFA183D52184F0B500CE443B /* Build configuration list for PBXProject "TicTalk" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFA183D12184F0B500CE443B;
+			productRefGroup = FFA183DB2184F0B500CE443B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFA183D92184F0B500CE443B /* TicTalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFA183D82184F0B500CE443B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA183E82184F0B600CE443B /* LaunchScreen.storyboard in Resources */,
+				FFA183E52184F0B600CE443B /* Assets.xcassets in Resources */,
+				FFA183E32184F0B500CE443B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFA183D62184F0B500CE443B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA184062186A4E400CE443B /* Result.swift in Sources */,
+				FFA183F62185035200CE443B /* SearchHeader.swift in Sources */,
+				FFA183FC2185077F00CE443B /* UIView+anchor.swift in Sources */,
+				FFA183E02184F0B500CE443B /* ViewController.swift in Sources */,
+				FFA1840C21880B9000CE443B /* APIService.swift in Sources */,
+				FFA18404218547EB00CE443B /* SearchCell.swift in Sources */,
+				FFA183DE2184F0B500CE443B /* AppDelegate.swift in Sources */,
+				FFA183F02184F4D300CE443B /* MainTabBarController.swift in Sources */,
+				FFA183F42184FA4A00CE443B /* SearchController.swift in Sources */,
+				FFA184082187B34A00CE443B /* UIImageView+loadImage.swift in Sources */,
+				FFA1840A2187BD2E00CE443B /* SearchController+UISearchBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFA183E12184F0B500CE443B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFA183E22184F0B500CE443B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFA183E62184F0B600CE443B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFA183E72184F0B600CE443B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFA183EA2184F0B600CE443B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFA183EB2184F0B600CE443B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFA183ED2184F0B600CE443B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TicTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TicTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFA183EE2184F0B700CE443B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TicTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TicTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFA183D52184F0B500CE443B /* Build configuration list for PBXProject "TicTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA183EA2184F0B600CE443B /* Debug */,
+				FFA183EB2184F0B600CE443B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFA183EC2184F0B600CE443B /* Build configuration list for PBXNativeTarget "TicTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA183ED2184F0B600CE443B /* Debug */,
+				FFA183EE2184F0B700CE443B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFA183D22184F0B500CE443B /* Project object */;
+}
